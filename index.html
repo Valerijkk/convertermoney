@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- Определение типа документа HTML5 -->
+
+<html lang="ru">
+<!-- Начало HTML-документа с указанием языка 'ru' -->
+
+<head>
+    <!-- Начало секции head, содержащей метаданные и ссылки на стили -->
+
+    <meta charset="UTF-8" />
+    <!-- Установка кодировки документа на UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Настройка viewport для адаптивного дизайна -->
+
+    <title>Конвертер Валют</title>
+    <!-- Установка заголовка страницы -->
+
+    <!-- Подключение Font Awesome для иконок -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-HHsAqvSeYKgBdMHCsR8h1RfY1ZlTq1hF7mQNrPNi5dXcc3zR6rjDoXh3hXdvF1N7JDZ7OjLpXjHUMjZL2YbDgQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
+    <!-- Подключение внешнего CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Ссылка на файл стилей styles.css -->
+</head>
+
+<body>
+<!-- Начало секции body, содержащей содержимое страницы -->
+
+<div class="container">
+    <!-- Контейнер для центрального блока конвертера валют -->
+
+    <h2>Конвертер Валют</h2>
+    <!-- Заголовок страницы -->
+
+    <div class="wrapper">
+        <!-- Обёртка для формы конвертации -->
+
+        <form>
+            <!-- Начало формы -->
+
+            <div class="amount">
+                <!-- Блок для ввода суммы -->
+
+                <label for="amount">Сумма:</label>
+                <!-- Метка для поля ввода суммы -->
+
+                <input type="number" id="amount" value="1" min="0" />
+                <!-- Поле ввода суммы, тип number, начальное значение 1, минимум 0 -->
+            </div>
+
+            <div class="convert_box">
+                <!-- Блок для выбора валют "Из" и "В" -->
+
+                <div class="from">
+                    <!-- Блок для выбора валюты "Из" -->
+
+                    <label for="from">Из:</label>
+                    <!-- Метка для селектора "Из" -->
+
+                    <div class="select_input">
+                        <!-- Контейнер для селектора и флага -->
+
+                        <img id="from-flag" src="https://flagcdn.com/48x36/ru.png" alt="Флаг" />
+                        <!-- Изображение флага для выбранной валюты "Из" -->
+
+                        <select id="from">
+                            <!-- Выпадающий список для выбора валюты "Из", опции добавятся через JavaScript -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="reverse"><i class="fas fa-exchange-alt"></i></div>
+                <!-- Иконка для обмена валют местами -->
+
+                <div class="to">
+                    <!-- Блок для выбора валюты "В" -->
+
+                    <label for="to">В:</label>
+                    <!-- Метка для селектора "В" -->
+
+                    <div class="select_input">
+                        <!-- Контейнер для селектора и флага -->
+
+                        <img id="to-flag" src="https://flagcdn.com/48x36/ru.png" alt="Флаг" />
+                        <!-- Изображение флага для выбранной валюты "В" -->
+
+                        <select id="to">
+                            <!-- Выпадающий список для выбора валюты "В", опции добавятся через JavaScript -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result">Результат появится здесь</div>
+            <!-- Блок для отображения результата конвертации -->
+
+            <button type="button">Конвертировать</button>
+            <!-- Кнопка для выполнения конвертации -->
+        </form>
+    </div>
+</div>
+
+<!-- Подключение внешнего JavaScript -->
+<script src="script.js"></script>
+<!-- Ссылка на файл скрипта script.js -->
+</body>
+
+</html>
